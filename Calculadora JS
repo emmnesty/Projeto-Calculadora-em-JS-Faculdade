@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora com javascript</title>
+<script type="text/javascript">
+
+	function Limpar() {
+		document.getElementById('visor').value ='';
+	}
+
+
+	function preencher(valor){
+		document.getElementById('visor').value += valor; 
+	}
+	function calcular(){
+		var resultado = 0;
+	resultado = document.getElementById('visor').value;
+	document.getElementById('visor').value = '';
+	document.getElementById('visor').value = eval(resultado);
+	}
+
+
+</script>
+
+<style type="text/css">
+	.botao{
+		width:40px;
+		height:40px;
+		background:#DF1111;
+		color:#FFF;
+	}
+	.visor{
+		font-size:1.5em;
+		color:#666;
+	}
+</style>
+</head>
+<body>
+ 
+ <input type="text" id="visor" size="12" class="visor"/>
+ <br /><br />
+ <input type="submit" class="botao" value="1" onclick="preencher(1);" />
+ <input type="submit" class="botao" value="2" onclick="preencher(2);" />
+ <input type="submit" class="botao" value="3" onclick="preencher(3);" />	
+ <input type="submit" class="botao" value="/" onclick="preencher('/');" />
+ <br /><br />
+ <input type="submit" class="botao" value="4" onclick="preencher(4);" />
+ <input type="submit" class="botao" value="5" onclick="preencher(5);" />
+ <input type="submit" class="botao" value="6" onclick="preencher(6);" />
+ <input type="submit" class="botao" value="*" onclick="preencher('*');" />
+ <br /><br />
+ <input type="submit" class="botao" value="7" onclick="preencher(7);" />
+ <input type="submit" class="botao" value="8" onclick="preencher(8);" />
+ <input type="submit" class="botao" value="9" onclick="preencher(9);" />
+ <input type="submit" class="botao" value="+" onclick="preencher('+');" />
+ <br /><br />
+<input type="submit" class="botao" value="-" onclick="preencher('-');" />
+<input type="submit" class="botao" value="0" onclick="preencher(0);" />
+<input type="submit" class="botao" value="C" onclick="Limpar();"/>
+<input type="submit" class="botao" value="=" onclick="calcular(); "/>
+
+</body>
+</html>
